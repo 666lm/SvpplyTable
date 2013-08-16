@@ -5,4 +5,4 @@ Svpply Table Animation, Likely.
 
 Svpply Table Animation is very different, smooth. I liked it.
 
-![](http://publicopensource.qiniudn.com/SvpplyTable.gif)
+![](http://publicopensource.qiniudn.com/STable.gif)
