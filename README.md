@@ -3,7 +3,7 @@ SvpplyTable
 
 SvpplyTable is a demo to realize expandable and collapsable menu animation, Like Svpply app.
 
-## How to use SvpplyTableViewController
+## How to Use
 
 You can replace categories.json with your content. And you should follow categories.json format.
 
