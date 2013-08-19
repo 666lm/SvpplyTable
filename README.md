@@ -19,3 +19,7 @@ Email: liuminqian0211@gmail.com
 This is my first opensource code, so I need your help to improve this repo.
 
 If you have any advice or problem, please contact me.
+
+##License
+
+SvpplyTable are available under the MIT license. See the LICENSE file for more info.
