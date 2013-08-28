@@ -10,8 +10,9 @@ You can replace categories.json with your content. And you should follow categor
 ## categories.json Format Sample
 
 
-{
-	"meta":{
+
+
+	{"meta":{
 		"status":200,
 		"msg":"OK",
 		"time":1335541016
@@ -42,7 +43,8 @@ You can replace categories.json with your content. And you should follow categor
 		}
 		]
 	}
-}
+	}
+
 
 
 ## Sample Screenshot
