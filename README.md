@@ -9,40 +9,6 @@ You can replace categories.json with your content. And you should follow categor
 
 ## categories.json Format Sample
 
-{
-	"meta":{
-		"status":200,
-		"msg":"OK",
-		"time":1335541016
-	},
-	"response":{
-		"categories":[
-		{
-			"name":"All Products",
-			"url":"https:\/\/api.svpply.com\/v1\/shop.json",
-			"text_color":"#000000",
-			"border_color":"#000000",
-			"children":[
-			{
-				"name":"Men\u2019s",
-				"url":"https:\/\/api.svpply.com\/v1\/shop\/mens.json",
-				"text_color":"#FF5B54",
-				"border_color":"#FFDEDD",
-				"children":[
-				{
-					"name":"Clothing",
-					"url":"https:\/\/api.svpply.com\/v1\/shop\/mens\/clothing.json",
-					"text_color":"#FF5B54",
-					"border_color":"#FFDEDD"
-				}			
-				]
-			}
-			]
-		}
-		]
-	}
-}
-
 ## Sample Screenshot
 ![](http://publicopensource.qiniudn.com/STable.gif)
 
