@@ -61,7 +61,9 @@ This is my first opensource code, so I need your help to improve this repo.
 If you have any advice or problem, please contact me.
 
 ------
+
 This project was made by Xcode5 DP2. If you want to use it in older Xcode, you need new project. 
+
 Thank you for [devTang](http://blog.devtang.com/).
 
 ##License
