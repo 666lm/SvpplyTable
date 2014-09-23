@@ -14,9 +14,9 @@
 
 typedef enum
 {
-  UITableViewRowInsert,
-  UITableViewRowDelete
-}UITableViewRowAction;
+  STTableViewRowInsert,
+  STTableViewRowDelete
+}STTableViewRowAction;
 
 @interface STTableViewController ()
 {
@@ -110,7 +110,7 @@ typedef enum
   
   NSInteger categoryIndex = [self getCategoryIndexFrom:index];
   
-  int currentIndex = -1, movedIndex = -1;
+  NSInteger currentIndex = -1, movedIndex = -1;
   
   [self.tableView beginUpdates];
   
@@ -120,7 +120,7 @@ typedef enum
     
     _selectedCategorySection = -1;
     
-    [self tableViewBased:currentIndex from:UITableViewRowAnimationTop to:UITableViewRowAnimationFade action:UITableViewRowDelete];
+    [self tableViewBased:currentIndex from:UITableViewRowAnimationTop to:UITableViewRowAnimationFade action:STTableViewRowDelete];
     
     
     NSInteger rootIndex = [self getCategoryIndexFrom:1];
@@ -131,7 +131,7 @@ typedef enum
     movedIndex = [self.displayedChildren indexOfObject:[NSString stringWithFormat:@"%d", rootIndex]];
     if (currentIndex != movedIndex) movedIndex = 0;
 
-    [self tableViewBased:movedIndex from:UITableViewRowAnimationBottom to:UITableViewRowAnimationTop action:UITableViewRowInsert];
+    [self tableViewBased:movedIndex from:UITableViewRowAnimationBottom to:UITableViewRowAnimationTop action:STTableViewRowInsert];
     
   }
   else
@@ -152,7 +152,7 @@ typedef enum
         _selectedCategorySection = 1;
         
         currentIndex = index;
-        [self tableViewBased:currentIndex from:UITableViewRowAnimationBottom to:UITableViewRowAnimationFade action:UITableViewRowDelete];
+        [self tableViewBased:currentIndex from:UITableViewRowAnimationBottom to:UITableViewRowAnimationFade action:STTableViewRowDelete];
         
         [self.displayedChildren removeAllObjects];
         [self.displayedChildren addObject:@"0"];
@@ -162,7 +162,7 @@ typedef enum
         
         movedIndex = _selectedCategorySection;
         
-        [self tableViewBased:movedIndex from:UITableViewRowAnimationFade to:UITableViewRowAnimationFade action:UITableViewRowInsert];
+        [self tableViewBased:movedIndex from:UITableViewRowAnimationFade to:UITableViewRowAnimationFade action:STTableViewRowInsert];
         
       }
       else
@@ -181,7 +181,7 @@ typedef enum
           _selectedCategorySection += 1;
         }
         
-        [self tableview:self.tableView baseIndexPath:[self getIndexPath:currentIndex] fromIndexPath:[self getIndexPath:range.location] animation:UITableViewRowAnimationNone toIndexPath:[self getIndexPath:range.location + range.length - 1] animation:UITableViewRowAnimationNone tableViewAction:UITableViewRowDelete];
+        [self tableview:self.tableView baseIndexPath:[self getIndexPath:currentIndex] fromIndexPath:[self getIndexPath:range.location] animation:UITableViewRowAnimationNone toIndexPath:[self getIndexPath:range.location + range.length - 1] animation:UITableViewRowAnimationNone tableViewAction:STTableViewRowDelete];
         
         [self.displayedChildren removeObjectsInRange:range];
         
@@ -208,12 +208,12 @@ typedef enum
   
 }
 
-- (void)tableViewBased:(NSInteger)base from:(UITableViewRowAnimation)from to:(UITableViewRowAnimation)to action:(UITableViewRowAction)action
+- (void)tableViewBased:(NSInteger)base from:(UITableViewRowAnimation)from to:(UITableViewRowAnimation)to action:(STTableViewRowAction)action
 {
   [self tableview:self.tableView baseIndexPath:[self getIndexPath:base] fromIndexPath:[self getIndexPath:0] animation:from toIndexPath:[self getIndexPath:self.displayedChildren.count - 1] animation:to tableViewAction:action];
 }
 
-- (void)tableview:(UITableView *)tableView baseIndexPath:(NSIndexPath *)baseIndexPath fromIndexPath:(NSIndexPath *)fromIndexPath animation:(UITableViewRowAnimation)baseTofromAnimation toIndexPath:(NSIndexPath *)toIndexPath animation:(UITableViewRowAnimation)baseTotoAnimation tableViewAction:(UITableViewRowAction)action
+- (void)tableview:(UITableView *)tableView baseIndexPath:(NSIndexPath *)baseIndexPath fromIndexPath:(NSIndexPath *)fromIndexPath animation:(UITableViewRowAnimation)baseTofromAnimation toIndexPath:(NSIndexPath *)toIndexPath animation:(UITableViewRowAnimation)baseTotoAnimation tableViewAction:(STTableViewRowAction)action
 {
   NSMutableArray *array = [[NSMutableArray alloc]init];
   array = [self indexPathArray:fromIndexPath.row end:baseIndexPath.row - 1];
@@ -222,13 +222,13 @@ typedef enum
   [self tableView:tableView action:action indexPathArray:array animation:baseTotoAnimation];
 }
 
-- (void)tableView:(UITableView *)tableView action:(UITableViewRowAction)action indexPathArray:(NSArray *)indexPathArray animation:(UITableViewRowAnimation)animation
+- (void)tableView:(UITableView *)tableView action:(STTableViewRowAction)action indexPathArray:(NSArray *)indexPathArray animation:(UITableViewRowAnimation)animation
 {
-  if (UITableViewRowInsert == action )
+  if (STTableViewRowInsert == action )
   {
     [tableView insertRowsAtIndexPaths:indexPathArray withRowAnimation:animation];
   }
-  else if (UITableViewRowDelete == action)
+  else if (STTableViewRowDelete == action)
   {
     [tableView deleteRowsAtIndexPaths:indexPathArray withRowAnimation:animation];
   }
@@ -269,10 +269,10 @@ typedef enum
   return 0;
 }
 
-- (NSMutableArray *)indexPathArray:(int)begin end:(int)end
+- (NSMutableArray *)indexPathArray:(NSInteger)begin end:(NSInteger)end
 {
   NSMutableArray *indexPathArray = [[NSMutableArray alloc]init];
-  for (int i = begin; i <= end; i++) {
+  for (NSInteger i = begin; i <= end; i++) {
     [indexPathArray addObject:[self getIndexPath:i]];
   }
   return indexPathArray;

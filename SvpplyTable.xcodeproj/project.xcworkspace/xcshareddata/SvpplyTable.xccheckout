@@ -2,49 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>DBF00B59-570E-45BA-AFCA-DB92209F5E8C</string>
+	<string>14C74EF7-6528-456E-AC53-C30E8B65C06F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>SvpplyTable</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>CC9D3181-4F8B-4634-978B-0A91756F0DCD</key>
-		<string>ssh://github.com/johnezang/JSONKit.git</string>
-		<key>DD5CC9C7-041D-481C-BB46-5F3E6AC87777</key>
-		<string>ssh://git.lanshizi.com/minqianliu-repo/svpplytable.git</string>
+		<key>20D0970C-70F6-4DA2-9BD5-95FF18F90257</key>
+		<string>ssh://github.com/liuminqian/SvpplyTable.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SvpplyTable.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>CC9D3181-4F8B-4634-978B-0A91756F0DCD</key>
-		<string>../../SvpplyTable/Vendors/JSONKit</string>
-		<key>DD5CC9C7-041D-481C-BB46-5F3E6AC87777</key>
+		<key>20D0970C-70F6-4DA2-9BD5-95FF18F90257</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://git.lanshizi.com/minqianliu-repo/svpplytable.git</string>
+	<string>ssh://github.com/liuminqian/SvpplyTable.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DD5CC9C7-041D-481C-BB46-5F3E6AC87777</string>
+	<string>20D0970C-70F6-4DA2-9BD5-95FF18F90257</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CC9D3181-4F8B-4634-978B-0A91756F0DCD</string>
+			<string>20D0970C-70F6-4DA2-9BD5-95FF18F90257</string>
 			<key>IDESourceControlWCCName</key>
-			<string>JSONKit</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DD5CC9C7-041D-481C-BB46-5F3E6AC87777</string>
-			<key>IDESourceControlWCCName</key>
-			<string>svpplytable</string>
+			<string>SvpplyTable</string>
 		</dict>
 	</array>
 </dict>
