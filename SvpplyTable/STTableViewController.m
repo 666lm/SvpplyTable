@@ -301,9 +301,8 @@ typedef enum
   
   STCategory *category = [[STCategory alloc]initWithJSON:jsonDict];
   
+  NSInteger currentIndex = [self.categories count];
   [self.categories addObject:category];
-  
-  NSInteger currentIndex = [self.categories indexOfObject:category];
   
   NSMutableArray *array = [[NSMutableArray alloc] init];
   NSMutableArray *jsonArray = [jsonDict objectForKey:@"children"];
